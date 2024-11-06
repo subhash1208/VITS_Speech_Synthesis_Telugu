@@ -16,26 +16,53 @@ This project aims to build a Variational Inference Text-to-Speech (VITS) model t
 
 ## 1. Project Setup
 
-Before you begin, ensure you have the following prerequisites:
 
-### Prerequisites
-- **Python 3.x** (preferably 3.10 or 3.11 for compatibility)
-- Python Libraries:
-  - `json`
-  - `os`
-  - `random`
+### Step 1: **Set Up Your Python Environment in VS Code**
+1. **Clone this repo**:
+```git bash
 
-You can install the necessary dependencies with the following command:
-```bash
-pip install json os random
-```
 
-Create a virtual environment to isolate your project dependencies:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+2. **Open VS Code** and create a new folder for your project, for example, `VITS_Speech_Synthesis`.
+3. **Create a Virtual Environment**:
+   - In VS Code’s integrated terminal, navigate to your project folder.
+   - Run the following command to create a virtual environment named `venv` using Python 3.11 (since VITS and dependencies are more likely to be compatible with Python 3.11):
+     ```bash
+     python3.11 -m venv venv
+     ```
+   - **Activate the virtual environment**:
+     - On **Windows**:
+       ```bash
+       .\venv\Scripts\activate
+       ```
+     - On **macOS/Linux**:
+       ```bash
+       source venv/bin/activate
+       ```
 
+4. **Install Required Libraries**:
+   - With the virtual environment active, install the required libraries for VITS, audio processing, and WebSocket streaming:
+     ```bash
+     pip install torch torchaudio numpy librosa websockets soundfile ffmpeg-python
+     ```
+   
+### Step 2: **Clone the VITS Repository**
+
+1. In your terminal (still in the project directory), clone the VITS repository:
+   ```bash
+   git clone https://github.com/jaywalnut310/vits.git
+   ```
+2. Navigate into the VITS folder:
+   ```bash
+   cd vits
+   ```
+   
+3. **Install Additional Requirements for VITS**:
+   - Inside the `vits` folder, install any additional dependencies required by the VITS model:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+Let me know when you’re set with these steps, and we’ll proceed with data acquisition from the AI4Bharat corpus!
 ### Directory Structure
 
 Your project directory should look like this:
