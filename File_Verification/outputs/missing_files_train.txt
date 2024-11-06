@@ -1,0 +1,1 @@
+All files in D:\Projects\VITS_Speech_Synthesis\data\IndicVoices-R\Telugu\metadata_train.json are verified to be present.
